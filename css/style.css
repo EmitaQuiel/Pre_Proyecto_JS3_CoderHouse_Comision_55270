@@ -212,9 +212,10 @@ nav ul li a:hover::after {
 }
 
 .aniversario{
-  background: #ffffff;
   width: 100%;
-  height: 800px;
+  background-image: url(../assets/img/background-aniversario.png); 
+  background-size: 1100px;
+  height: 200px;
 }
 .aniversario p{
   position: relative;
@@ -243,13 +244,13 @@ top: 255px;
 .presentacion-productos h1{
   width: 100%;
   position: relative;
-  top: 290px;
+  top: 340px;
   text-align: center;
 }
 .presentacion-productos p{
   width: 100%;
   position: relative;
-  top: 290px;
+  top: 350px;
   text-align: center;
   font-size: 25px;
   padding-top: 10px;
@@ -258,7 +259,6 @@ top: 255px;
   position: relative;
   top: 300px;
   width: 100%;
-  background-color: #f2f5ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,33 +314,41 @@ top: 255px;
 }
 
 .boton-agregar-carrito {
-  background: #5e5df0;
-  border-radius: 999px;
-  box-shadow: #5e5df0 0 10px 20px -10px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
-    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
-    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    "Noto Sans", sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 24px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 8px 18px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
   position: relative;
-  left: 90px;
-  top: 20px;
+  left: 100px;
+  top: 13px;
+  overflow: hidden;
+  z-index: 1;
+  font-weight: bold;
+  box-shadow: 6px 6px 12px #c5c5c5,
+              -6px -6px 12px #ffffff;
 }
+.boton-agregar-carrito::before{
+  content: '';
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #ff6600 0%, #f9d547 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
 
+}
+.boton-agregar-carrito:hover{
+  color: white;
+}
+.boton-agregar-carrito:hover::before{
+  width: 9em;
+}
 .contenedor-productos-cardsets .productos-cardsets li {
   display: inline-block;
   position: relative;
@@ -357,7 +365,7 @@ top: 255px;
 }
 
 .titulo-principal img {
-  width: 110px;
+  width: 120px;
   position: relative;
   top: 25px;
   right: 10px;
@@ -394,19 +402,21 @@ top: 255px;
   margin-top: 50px;
   margin-left: 20px;
 }
-
 .contenedor-tendencias {
-  height: 600px;
+  width: 100%;
+  height: 400px;
   position: relative;
   top: 300px;
-  background-color: #ffffff;
+  background-image: url(../assets/img/background-tendencias.jpg); 
+  background-size: 100%;
   overflow: hidden;
 }
-
+.contenedor-tendencias h1{
+  text-align: center;
+}
 .contenedor-tendencias .logos {
   overflow: hidden;
   padding: 60px 0;
-  background: white;
   white-space: nowrap;
   position: relative;
 }
@@ -424,12 +434,12 @@ top: 255px;
 
 .contenedor-tendencias .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0));
 }
 
 .contenedor-tendencias .logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0));
 }
 
 @keyframes slide {

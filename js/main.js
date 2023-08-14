@@ -188,7 +188,7 @@ const productos = [
   {
     codigo: 25,
     nombre: "Pokémon GO Caja Élite de Entrenamiento",
-    precio: 30000,
+    precio: 49900,
     imagen:
       "../assets/img/caja elite mewtwo.png",
     seccion: "elitebox",
@@ -196,7 +196,7 @@ const productos = [
   {
     codigo: 26,
     nombre: "Pokémon Caja Élite de Entrenador Obsidian Flames",
-    precio: 30000,
+    precio: 36700,
     imagen:
       "../assets/img/Caja_Élite_de_Entrenador_Obsidian_Flames-removebg-preview.png",
     seccion: "elitebox",
