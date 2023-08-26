@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Heebo&family=PT+Sans:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -56,7 +56,7 @@ header {
   top: 0;
   left: 100%;
   width: 500px;
-  background-color: #eaeaff;
+  background-color: #ffffff;
   height: 100vh;
   max-height: 100vh;
   overflow-y: auto;
@@ -67,59 +67,108 @@ header {
   align-items: center;
 }
 .pago h1 {
-  color: #00163f;
+  color: #000000;
   font-weight: 100;
   margin: 0;
   padding: 0 20px;
   height: 80px;
   display: flex;
-  align-items: center;
+  text-align: center;
+  position: relative;;
+  top: 30px;
 }
 .pago .pagar {
   position: absolute;
   bottom: 0;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+}
+.cerrar-tienda{
+  position: relative;
+  bottom: 525px;
+  width: 20px;
+  right: 180px;
+  cursor: pointer;
+}
+.cerrar-tienda img{
+  width: 30px;
 }
 .pago .pagar div {
-  background-color: #5e5df0;
-  width: 100%;
-  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
+  bottom: 50px;
+}
+.precio-pagar p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: normal;
+  position: relative;
+  right: 150px;
+  bottom: 5px;
+}
+.total-pagar{
+  position: relative;
+  left: 150px;
+}
+.pago .pagar div:nth-child(1) {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: default;
+  width: 97%;
+  height: 40px;
+  position: relative;
+  bottom: 5px;
 }
 .pago .pagar div:nth-child(2) {
-  background-color: #1c1f25;
+  background-color: #260087;
   color: #ffffff;
+  border-radius: 30px;
+  width: 350px;
+  height: 50px;
+  position: relative;
+  bottom: 9px;
+  left: 67px;
 }
-
+.overlay::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 6;
+  display: none;
+}
+.overlay.active::before {
+  display: block; 
+}
 .active .pago {
   left: calc(100% - 500px);
 }
 .active .contenedor-carrito {
   transform: translateX(-200px);
 }
-
-
 .lista-pago {
-  
   flex: 1;
   width: 100%;
   max-height: calc(100vh - 150px); 
   padding: 20px;
   overflow-y: auto;
+  position: relative;
+  bottom: 30px;
 }
-
 .lista-pago li{
   display: grid;
   grid-template-columns: 100px repeat(3,1fr);
   color: #000000;
   row-gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgb(174, 174, 174);
 }
 .lista-pago li div{
   display: flex;
@@ -132,6 +181,26 @@ header {
 .lista-pago button{
   width: 20px;
   background-color: #fff5;
+  border: none;
+}
+#boton-eliminar-producto{
+  position: relative;
+  left: 360px;
+  bottom: 70px;
+  font-size: 25px;
+}
+.vaciar-carrito{
+  position: relative;
+  left: 170px;
+  bottom: 50px;
+  margin: none;
+}
+.vaciar-carrito img{
+  width: 25px;
+  position: relative;
+  top: 5px;
+}
+#vaciar-carrito-btn{
   border: none;
 }
 .lista-pago .contar{
@@ -148,22 +217,20 @@ header {
   height: 10px;
   padding: 1px 10%;
 }
-
-
-
+.botones-productos button{
+  cursor: pointer;
+}
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 nav ul li {
   display: inline-block;
   list-style: none;
   margin: 10px 20px;
 }
-
 nav ul li a {
   color: #000000;
   text-decoration: none;
@@ -171,19 +238,17 @@ nav ul li a {
   position: relative;
   top: 30px;
 }
-
 /*cambiale el color a tu gusto, es la barra que esta debajo de sobre mi y demas*/
 nav ul li a::after {
   content: "";
   width: 0;
   height: 3px;
-  background: #ff00d4;
+  background: #ff5900;
   position: absolute;
   left: 0;
   bottom: -6px;
   transition: 0.5s;
 }
-
 nav ul li a:hover::after {
   width: 100%;
 }
@@ -194,7 +259,6 @@ nav ul li a:hover::after {
   background-repeat: no-repeat;
   height: 330px;
 }
-
 .contenedor h1 {
   font-size: 80px;
   text-align: center;
@@ -280,7 +344,7 @@ nav ul li a:hover::after {
 /* FIN CONTENEDOR ANIVERSARIO */
 
 .presentacion-productos{
-  background-image: url(../assets/img/Fondo_Pokemon.png); 
+  background-image: url(../assets/img/backgrounds/Fondo_Pokemon.png); 
   background-size: 1100px;
   height: 700px;
   animation: movimiento 10s infinite linear alternate;
@@ -323,6 +387,7 @@ top: 255px;
   overflow: hidden;
 }
 
+
 .box {
   width: 350px;
   height: 420px;
@@ -330,8 +395,8 @@ top: 255px;
   border-radius: 10px;
   box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+    
 }
-
 .model {
   position: relative;
   left: 40px;
@@ -340,14 +405,12 @@ top: 255px;
   max-height: 100%;
   max-width: 100%;
 }
-
 .detalles {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 300px;
 }
-
 .detalles p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #000000;
@@ -356,7 +419,6 @@ top: 255px;
   margin-top: 20px;
   font-size: 20px;
 }
-
 .producto-pokemon {
   color: #000000;
   font-weight: bold;
@@ -368,7 +430,6 @@ top: 255px;
   position: relative;
   top: 10px;
 }
-
 .boton-agregar-carrito {
   width: 9em;
   height: 3em;
@@ -412,7 +473,6 @@ top: 255px;
   margin-top: 50px;
   margin-left: 20px;
 }
-
 .titulo-principal {
   position: relative;
   left: 390px;
@@ -420,14 +480,12 @@ top: 255px;
   font-size: 40px;
   margin-bottom: 20px;
 }
-
 .titulo-principal img {
   width: 120px;
   position: relative;
   top: 25px;
   right: 10px;
 }
-
 .contenedor-productos-boosters {
   position: relative;
   top: 500px;
@@ -439,7 +497,6 @@ top: 255px;
   padding-bottom: 100px;
   overflow: hidden;
 }
-
 .contenedor-productos-elitebox {
   position: relative;
   top: 500px;
@@ -451,7 +508,6 @@ top: 255px;
   padding-bottom: 100px;
   overflow: hidden;
 }
-
 .productos-boosters li,
 .productos-elitebox li {
   display: inline-block;
@@ -464,11 +520,10 @@ top: 255px;
   height: 770px;
   position: relative;
   top: 200px;
-  background-image: url(../assets/img/background-tendencias.jpg); 
+  background-image: url(../assets/img/backgrounds/background-tendencias.jpg); 
   background-size: 100%;
   overflow: hidden;
 }
-
 .contenedor-tendencias h1{
   text-align: center;
   position: relative;
@@ -486,7 +541,6 @@ top: 255px;
     text-align: center;
   left: 10%;
 }
-
 .contenedor-tendencias .logos {
   overflow: hidden;
   padding: 60px 0;
@@ -494,8 +548,6 @@ top: 255px;
   position: relative;
   top: 100px;
 }
-
-
 .contenedor-tendencias .logos:before,
 .contenedor-tendencias .logos:after {
   position: absolute;
@@ -505,17 +557,14 @@ top: 255px;
   content: "";
   z-index: 2;
 }
-
 .contenedor-tendencias .logos:before {
   left: 0;
   background: linear-gradient(to left, rgba(255, 255, 255, 0));
 }
-
 .contenedor-tendencias .logos:after {
   right: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 0));
 }
-
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -524,13 +573,11 @@ top: 255px;
     transform: translateX(-100%);
   }
 }
-
 .contenedor-tendencias .logos-slide {
   display: inline-block;
   white-space: nowrap;
   animation: 35s slide infinite linear;
 }
-
 .contenedor-tendencias .logos-slide img {
   height: 200px;
   margin: 0 40px;
@@ -593,8 +640,8 @@ footer{
   width: 100%;
   padding: 50px 0;
   background-color: #c7e7ff;
-  -webkit-mask-image: url(../assets/img/background-footer.svg);
-  mask-image: url(../assets/img/background-footer.svg);
+  -webkit-mask-image: url(../assets/img/backgrounds/background-footer.svg);
+  mask-image: url(../assets/img/backgrounds/background-footer.svg);
   -webkit-mask-size: cover;
   mask-size: cover;
   margin-top: 430px;
@@ -663,6 +710,150 @@ footer{
   bottom: 0;
   right: 0;
 }
+
+/* COMIENZO DE MOSTRAR CARTAS */
+.mostrar-cartas{
+  width: 100%;
+  margin: 0 auto; 
+  padding: 20px; 
+  background-image: url(../assets/img/backgrounds/background_cards.png); 
+  background-size: 900px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 120px;
+  bottom: 795px;
+}
+.mostrar-cartas h1{
+  position: absolute;
+  top: 55px;
+  font-size: 25px;
+  transform: translateX(400px);
+}
+.mostrar-cartas p{
+  position: relative;
+  bottom: 28px;
+  text-align: center;
+  font-size: 20px;
+}
+.card{
+  width: 320px;
+  height: 446px;
+  background-color: #211799;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.3), 3px 3px 3px 0 rgba(#f759e4, 0.3), 0px 0px 6px 2px rgba(#ffe759, 0.3), 0px 35px 25px -15px rgba(0, 0 ,0 , 0.3);
+  position: relative;
+  overflow: hidden;
+  margin: 20px 10px;
+  animation: haloCard 15s ease infinite;
+}
+.card img{
+  max-width: 100%;
+}
+
+.card:before, .card:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgb(0, 231, 255) 30%,
+    rgb(255, 0, 231) 70%,
+    transparent 100%
+  );
+  
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  mix-blend-mode: color-dodge;
+  opacity: 0.2;
+  z-index: 1;
+  animation: haloGradient 15s ease infinite;
+}
+.card:after{
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+  position: center;
+  background-size: 180%;
+  mix-blend-mode: color-dodge;
+  opacity: 1;
+  z-index: 2;
+  animation: haloSparkle 15s ease;
+}
+.card.active:before{
+  opacity: 1;
+  animation: none;
+  transition: none;
+
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 25%,
+    rgb(0, 231, 255, 0.7)45%,
+    rgb(255, 0, 231, 0.7) 55%,
+    transparent 70%,
+    transparent 100%);
+}
+.card.active:before, .card.active:after{
+  animation: none;
+}
+.card{
+  width: 240px;
+  height: 335px;
+  box-shadow: 0 0 1px 1px rgba(white, 0.4), 0 25px 15px -10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes haloGradient{
+  0%,100%{
+    opacity: 0;
+    background-position: 0% 0%;
+  }
+  8%{
+    opacity: 0;
+  }
+  10%{
+    background-position: 0% 0%;
+  }
+  19%{
+    background-position: 100% 100%;
+    opacity: 0.1;
+  }
+  35%{
+    background-position: 100% 100%;
+  }
+  55%{
+    background-position: 0% 0%;
+    opacity: 0.2;
+  }
+  75%{
+    opacity: 0;
+  }
+}
+@keyframes haloCard{
+  0%, 100%{
+    transform: none;
+  }
+  25%{
+    transform: rotateZ(-3deg) rotateX(-7deg) rotateY(6deg);
+  }
+  66%{
+    transform: rotateZ(3deg) rotateX(7deg) rotateY(-6deg);
+  }
+}
+
+#app{
+  position: relative;
+  perspective: 1000px;
+}
+/* FIN DE MOSTRAR CARTAS */
+
 
 /* RESPONSIVE TABLET */
 @media (max-width: 767px) {

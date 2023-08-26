@@ -8,6 +8,7 @@
   </head>
   <body>
     <!-- INICIO DE HEADER -->
+    <div class="overlay">
     <header>
       <div class="contenedor-opciones">
         <nav>
@@ -32,22 +33,9 @@
     <!-- FINAL DE HEADER -->
     
     <main>
-      <!-- COMIENZO CARRITO -->
-      <section>
-        <div class="pago">
-          <h1>Carrito de Compra</h1>
-          <ul class="lista-pago"></ul>
-          <div class="pagar">
-            <div class="total-pagar">0</div>
-            <div class="cerrar-tienda">Cerrar</div>
-          </div>
-        </div>
-      </section>
-      <!-- FINAL CARRITO -->
-
       <!-- INICIO DE PRESENTACION -->
       <div class="presentacion-productos">
-        <img src="../assets/img/presentacion-productos.png" alt="" />
+        <img src="../assets/img/backgrounds/presentacion-productos.png" alt="" />
         <h1>Nuestros Productos</h1>
         <p>
           ¡Descubre el emocionante mundo de los TCG Pokemon con nuestros
@@ -82,7 +70,7 @@
           </h1>
           <ul class="productos-elitebox"></ul>
         </div>
-      </div>
+      </div>   
       <!-- FINAL DE CONTENEDOR PRODUCTOS -->
     </main>
 
@@ -148,8 +136,28 @@
         <b>Emily Castillo Quiel</b>
       </div>
     </footer>
+  </div>
     <!-- FINAL FOOTER -->
-
+    <!-- COMIENZO CARRITO -->
+    <section>
+      <div class="pago">
+        <h1>Mi carrito</h1>
+        <div class="vaciar-carrito">
+          <img src="../assets/img/shopping-card.svg" alt="">
+          <button id="vaciar-carrito-btn">Vaciar</button>
+        </div>          
+        <ul class="lista-pago"></ul>
+        <div class="pagar">
+          <div class="precio-pagar">
+            <p>Total a pagar: &nbsp;</p><p class="total-pagar">0</p>
+          </div>
+          <div class="procesar-compra"><p>Procesar compra</p></div>
+        </div>
+        <div class="cerrar-tienda"><img src="../assets/img/salir.png"></div>
+      </div>
+    </section>
+    <!-- FINAL CARRITO -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
