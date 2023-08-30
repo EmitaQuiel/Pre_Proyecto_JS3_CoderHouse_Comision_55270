@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Heebo&family=PT+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Heebo&family=PT+Sans:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +32,7 @@ header {
   width: 30px;
 }
 .carrito span {
-  background-color: red;
+  background-color: rgb(255, 0, 0);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -50,7 +51,7 @@ header {
   row-gap: 20px;
   margin-top: 50px;
 }
-
+/* BACKGROUND DEL PAGO */
 .pago {
   position: fixed;
   top: 0;
@@ -66,6 +67,10 @@ header {
   flex-direction: column;
   align-items: center;
 }
+.pago::before {
+  position: relative;
+  left: 62%;
+}
 .pago h1 {
   color: #000000;
   font-weight: 100;
@@ -74,7 +79,7 @@ header {
   height: 80px;
   display: flex;
   text-align: center;
-  position: relative;;
+  position: relative;
   top: 30px;
 }
 .pago .pagar {
@@ -84,14 +89,14 @@ header {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
-.cerrar-tienda{
+.cerrar-tienda {
   position: relative;
   bottom: 525px;
   width: 20px;
   right: 180px;
   cursor: pointer;
 }
-.cerrar-tienda img{
+.cerrar-tienda img {
   width: 30px;
 }
 .pago .pagar div {
@@ -103,16 +108,12 @@ header {
   position: relative;
   bottom: 50px;
 }
-.precio-pagar p{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.precio-pagar p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: normal;
   position: relative;
   right: 150px;
   bottom: 5px;
-}
-.total-pagar{
-  position: relative;
-  left: 150px;
 }
 .pago .pagar div:nth-child(1) {
   background-color: #ffffff;
@@ -133,19 +134,19 @@ header {
   bottom: 9px;
   left: 67px;
 }
-.overlay::before{
+.overlay::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 6;
   display: none;
 }
 .overlay.active::before {
-  display: block; 
+  display: block;
 }
 .active .pago {
   left: calc(100% - 500px);
@@ -156,54 +157,54 @@ header {
 .lista-pago {
   flex: 1;
   width: 100%;
-  max-height: calc(100vh - 150px); 
+  max-height: calc(100vh - 150px);
   padding: 20px;
   overflow-y: auto;
   position: relative;
   bottom: 30px;
 }
-.lista-pago li{
+.lista-pago li {
   display: grid;
-  grid-template-columns: 100px repeat(3,1fr);
+  grid-template-columns: 100px repeat(3, 1fr);
   color: #000000;
   row-gap: 10px;
   margin-bottom: 30px;
   border-bottom: 2px solid rgb(174, 174, 174);
 }
-.lista-pago li div{
+.lista-pago li div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.lista-pago li img{
+.lista-pago li img {
   width: 90%;
 }
-.lista-pago button{
+.lista-pago button {
   width: 20px;
   background-color: #fff5;
   border: none;
 }
-#boton-eliminar-producto{
+#boton-eliminar-producto {
   position: relative;
   left: 360px;
   bottom: 70px;
   font-size: 25px;
 }
-.vaciar-carrito{
+.vaciar-carrito {
   position: relative;
   left: 170px;
   bottom: 50px;
   margin: none;
 }
-.vaciar-carrito img{
+.vaciar-carrito img {
   width: 25px;
   position: relative;
   top: 5px;
 }
-#vaciar-carrito-btn{
+#vaciar-carrito-btn {
   border: none;
 }
-.lista-pago .contar{
+.lista-pago .contar {
   margin: 0 10px;
 }
 .logo {
@@ -217,7 +218,7 @@ header {
   height: 10px;
   padding: 1px 10%;
 }
-.botones-productos button{
+.botones-productos button {
   cursor: pointer;
 }
 nav {
@@ -276,25 +277,25 @@ nav ul li a:hover::after {
 }
 
 /* CONTENEDOR ANIVERSARIO */
-.aniversario{
+.aniversario {
   width: 100%;
   background: #ffffff;
   position: relative;
   bottom: 10px;
   color: white;
 }
-.contenedor-aniversario-imagenes{
+.contenedor-aniversario-imagenes {
   position: relative;
   bottom: 149px;
 }
-.aniversario p{
+.aniversario p {
   position: relative;
   align-items: center;
   z-index: 3;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
-.aniversario span{
-  font-family: 'PT Sans', sans-serif;
+.aniversario span {
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   color: white;
   position: relative;
@@ -302,20 +303,20 @@ nav ul li a:hover::after {
   left: 230px;
   font-size: 30px;
 }
-.aniversario .p-aniversario-2{
+.aniversario .p-aniversario-2 {
   position: relative;
   left: 230px;
   top: 320px;
   font-size: 20px;
 }
-.p-aniversario{
+.p-aniversario {
   position: relative;
   left: 120px;
   top: 350px;
   font-size: 18px;
 }
 
-.aniversario-imagen-1{
+.aniversario-imagen-1 {
   width: 55%;
   height: 600px;
   position: relative;
@@ -324,7 +325,7 @@ nav ul li a:hover::after {
   float: left;
   z-index: 2;
 }
-.aniversario-imagen-2{
+.aniversario-imagen-2 {
   width: 800px;
   position: relative;
   left: 10%;
@@ -332,7 +333,7 @@ nav ul li a:hover::after {
   float: right;
   z-index: 1;
 }
-.aniversario-imagen-3{
+.aniversario-imagen-3 {
   width: 80px;
   border-radius: 100%;
   border: 20px solid white;
@@ -343,31 +344,32 @@ nav ul li a:hover::after {
 }
 /* FIN CONTENEDOR ANIVERSARIO */
 
-.presentacion-productos{
-  background-image: url(../assets/img/backgrounds/Fondo_Pokemon.png); 
+.presentacion-productos {
+  background-image: url(../assets/img/backgrounds/Fondo_Pokemon.png);
   background-size: 1100px;
   height: 700px;
   animation: movimiento 10s infinite linear alternate;
 }
 @keyframes movimiento {
-  from{
+  from {
     background-position: bottom left;
-  }to{
+  }
+  to {
     background-position: top right;
   }
 }
-.presentacion-productos img{
-width: 100%;
-position: relative;
-top: 255px;
+.presentacion-productos img {
+  width: 100%;
+  position: relative;
+  top: 255px;
 }
-.presentacion-productos h1{
+.presentacion-productos h1 {
   width: 100%;
   position: relative;
   top: 340px;
   text-align: center;
 }
-.presentacion-productos p{
+.presentacion-productos p {
   width: 100%;
   position: relative;
   top: 350px;
@@ -387,7 +389,6 @@ top: 255px;
   overflow: hidden;
 }
 
-
 .box {
   width: 350px;
   height: 420px;
@@ -395,7 +396,6 @@ top: 255px;
   border-radius: 10px;
   box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-    
 }
 .model {
   position: relative;
@@ -443,12 +443,11 @@ top: 255px;
   overflow: hidden;
   z-index: 1;
   font-weight: bold;
-  box-shadow: 6px 6px 12px #c5c5c5,
-              -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
   cursor: pointer;
 }
-.boton-agregar-carrito::before{
-  content: '';
+.boton-agregar-carrito::before {
+  content: "";
   width: 0;
   height: 3em;
   border-radius: 30em;
@@ -456,15 +455,14 @@ top: 255px;
   top: 0;
   left: 0;
   background-image: linear-gradient(to right, #ff6600 0%, #f9d547 100%);
-  transition: .5s ease;
+  transition: 0.5s ease;
   display: block;
   z-index: -1;
-
 }
-.boton-agregar-carrito:hover{
+.boton-agregar-carrito:hover {
   color: white;
 }
-.boton-agregar-carrito:hover::before{
+.boton-agregar-carrito:hover::before {
   width: 9em;
 }
 .contenedor-productos-cardsets .productos-cardsets li {
@@ -520,25 +518,25 @@ top: 255px;
   height: 770px;
   position: relative;
   top: 200px;
-  background-image: url(../assets/img/backgrounds/background-tendencias.jpg); 
+  background-image: url(../assets/img/backgrounds/background-tendencias.jpg);
   background-size: 100%;
   overflow: hidden;
 }
-.contenedor-tendencias h1{
+.contenedor-tendencias h1 {
   text-align: center;
   position: relative;
   top: 70px;
 }
-.contenedor-tendencias p{
+.contenedor-tendencias p {
   position: relative;
   top: 100px;
   font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   width: 80%;
   display: flex;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   left: 10%;
 }
 .contenedor-tendencias .logos {
@@ -565,6 +563,10 @@ top: 255px;
   right: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 0));
 }
+.total-pagar{
+  position: relative;
+  left: 150px;
+}
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -585,24 +587,24 @@ top: 255px;
 }
 
 /*VIDEO*/
-.container{
+.container {
   width: 100%;
   height: 100vh;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0.6;
 }
-.content{
+.content {
   text-align: center;
 }
-.content h1{
+.content h1 {
   font-size: 95px;
   color: #fff;
   margin-bottom: 50px;
 }
-.content a{
+.content a {
   font-size: 23px;
   color: #fff;
   text-decoration: none;
@@ -611,32 +613,32 @@ top: 255px;
   border-radius: 50px;
   transition: 0.3s;
 }
-.content a:hover{
+.content a:hover {
   background-color: #fff;
   color: #000;
 }
-.background-clip{
+.background-clip {
   position: absolute;
   right: 0;
   bottom: 0;
   top: 90px;
   z-index: -1;
 }
-@media (min-aspect-ratio:16/9) {
-  .background-clip{
-      width: 100%;
-      height: auto;
+@media (min-aspect-ratio: 16/9) {
+  .background-clip {
+    width: 100%;
+    height: auto;
   }
 }
-@media (max-aspect-ratio:16/9) {
-  .background-clip{
-      width: auto;
-      height: 100%;
+@media (max-aspect-ratio: 16/9) {
+  .background-clip {
+    width: auto;
+    height: 100%;
   }
 }
 
 /* FOOTER */
-footer{
+footer {
   width: 100%;
   padding: 50px 0;
   background-color: #c7e7ff;
@@ -648,7 +650,7 @@ footer{
   position: absolute;
 }
 
-.contenedor-footer{
+.contenedor-footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -656,22 +658,22 @@ footer{
   margin: auto;
   margin-top: 100px;
 }
-.box-footer{
+.box-footer {
   display: flex;
   flex-direction: column;
   padding: 40px;
 }
-.box-footer .logo-footer img{
+.box-footer .logo-footer img {
   width: 180px;
 }
-.box-footer .terms{
+.box-footer .terms {
   max-width: 350px;
   margin-top: 20px;
   font-weight: 500;
   color: #7a7a7a;
   font-size: 18px;
 }
-.box-footer h2{
+.box-footer h2 {
   margin-bottom: 30px;
   color: #343434;
   font-weight: 700;
@@ -682,13 +684,13 @@ footer{
   font-weight: 600;
   text-decoration: none;
 }
-.box-footer a:hover{
+.box-footer a:hover {
   opacity: 0.8;
 }
-.box-footer a .fab{
+.box-footer a .fab {
   font-size: 20px;
 }
-.box-copyrigth{
+.box-copyrigth {
   max-width: 1200px;
   margin: auto;
   text-align: center;
@@ -698,7 +700,7 @@ footer{
   margin-top: 20px;
   color: #7a7a7a;
 }
-.box-copyrigth hr{
+.box-copyrigth hr {
   border: none;
   height: 1px;
   background-color: #7a7a7a;
@@ -712,11 +714,11 @@ footer{
 }
 
 /* COMIENZO DE MOSTRAR CARTAS */
-.mostrar-cartas{
+.mostrar-cartas {
   width: 100%;
-  margin: 0 auto; 
-  padding: 20px; 
-  background-image: url(../assets/img/backgrounds/background_cards.png); 
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url(../assets/img/backgrounds/background_cards.png);
   background-size: 900px;
   position: relative;
   display: flex;
@@ -724,19 +726,19 @@ footer{
   padding: 120px;
   bottom: 795px;
 }
-.mostrar-cartas h1{
+.mostrar-cartas h1 {
   position: absolute;
   top: 55px;
   font-size: 25px;
   transform: translateX(400px);
 }
-.mostrar-cartas p{
+.mostrar-cartas p {
   position: relative;
   bottom: 28px;
   text-align: center;
   font-size: 20px;
 }
-.card{
+.card {
   width: 320px;
   height: 446px;
   background-color: #211799;
@@ -744,17 +746,20 @@ footer{
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 15px;
-  box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.3), 3px 3px 3px 0 rgba(#f759e4, 0.3), 0px 0px 6px 2px rgba(#ffe759, 0.3), 0px 35px 25px -15px rgba(0, 0 ,0 , 0.3);
+  box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.3),
+    3px 3px 3px 0 rgba(#f759e4, 0.3), 0px 0px 6px 2px rgba(#ffe759, 0.3),
+    0px 35px 25px -15px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
   margin: 20px 10px;
   animation: haloCard 15s ease infinite;
 }
-.card img{
+.card img {
   max-width: 100%;
 }
 
-.card:before, .card:after{
+.card:before,
+.card:after {
   content: "";
   position: absolute;
   left: 0;
@@ -769,7 +774,7 @@ footer{
     rgb(255, 0, 231) 70%,
     transparent 100%
   );
-  
+
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 300% 300%;
@@ -778,7 +783,7 @@ footer{
   z-index: 1;
   animation: haloGradient 15s ease infinite;
 }
-.card:after{
+.card:after {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
   position: center;
   background-size: 180%;
@@ -787,7 +792,7 @@ footer{
   z-index: 2;
   animation: haloSparkle 15s ease;
 }
-.card.active:before{
+.card.active:before {
   opacity: 1;
   animation: none;
   transition: none;
@@ -796,76 +801,79 @@ footer{
     115deg,
     transparent 0%,
     transparent 25%,
-    rgb(0, 231, 255, 0.7)45%,
+    rgb(0, 231, 255, 0.7) 45%,
     rgb(255, 0, 231, 0.7) 55%,
     transparent 70%,
-    transparent 100%);
+    transparent 100%
+  );
 }
-.card.active:before, .card.active:after{
+.card.active:before,
+.card.active:after {
   animation: none;
 }
-.card{
+.card {
   width: 240px;
   height: 335px;
   box-shadow: 0 0 1px 1px rgba(white, 0.4), 0 25px 15px -10px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes haloGradient{
-  0%,100%{
+@keyframes haloGradient {
+  0%,
+  100% {
     opacity: 0;
     background-position: 0% 0%;
   }
-  8%{
+  8% {
     opacity: 0;
   }
-  10%{
+  10% {
     background-position: 0% 0%;
   }
-  19%{
+  19% {
     background-position: 100% 100%;
     opacity: 0.1;
   }
-  35%{
+  35% {
     background-position: 100% 100%;
   }
-  55%{
+  55% {
     background-position: 0% 0%;
     opacity: 0.2;
   }
-  75%{
+  75% {
     opacity: 0;
   }
 }
-@keyframes haloCard{
-  0%, 100%{
+@keyframes haloCard {
+  0%,
+  100% {
     transform: none;
   }
-  25%{
+  25% {
     transform: rotateZ(-3deg) rotateX(-7deg) rotateY(6deg);
   }
-  66%{
+  66% {
     transform: rotateZ(3deg) rotateX(7deg) rotateY(-6deg);
   }
 }
 
-#app{
+#app {
   position: relative;
   perspective: 1000px;
 }
 /* FIN DE MOSTRAR CARTAS */
 
-
 /* RESPONSIVE TABLET */
 @media (max-width: 767px) {
   /* RESPONSIVE DE LA PRESENTACION PRINCIPAL */
-  .presentacion-productos{
+  .presentacion-productos {
     height: 500px;
   }
-  .presentacion-productos h1{
+  .presentacion-productos h1 {
     position: relative;
     top: 290px;
   }
-  .presentacion-productos p{
+  .presentacion-productos p {
     position: relative;
     top: 290px;
   }
@@ -874,21 +882,21 @@ footer{
   .contenedor-productos-cardsets .productos-cardsets li {
     margin: auto;
   }
-  .contenedor-productos-cardsets{
+  .contenedor-productos-cardsets {
     padding: 55px;
   }
-.contenedor-productos-boosters .productos-boosters li{
-  margin: auto;
-}
-.contenedor-productos-boosters{
-  padding: 55px;
-}
-.contenedor-productos-elitebox .productos-elitebox li{
-  margin: auto;
-}
-.contenedor-productos-elitebox{
-  padding: 55px;
-}
+  .contenedor-productos-boosters .productos-boosters li {
+    margin: auto;
+  }
+  .contenedor-productos-boosters {
+    padding: 55px;
+  }
+  .contenedor-productos-elitebox .productos-elitebox li {
+    margin: auto;
+  }
+  .contenedor-productos-elitebox {
+    padding: 55px;
+  }
   .titulo-principal {
     left: 140px;
   }
@@ -913,7 +921,7 @@ footer{
     margin-top: 20px;
     font-size: 20px;
   }
-  .boton-agregar-carrito {  
+  .boton-agregar-carrito {
     font-size: 12px;
     line-height: 14px;
     position: relative;
@@ -921,7 +929,7 @@ footer{
   }
 
   /* RESPONSIVE FOOTER */
-  footer{
+  footer {
     width: 100%;
     padding: 50px 0;
     background-color: #c7e7ff;
@@ -932,4 +940,133 @@ footer{
     margin-top: 430px;
     position: relative;
   }
+}
+
+
+/* HTML CONFIRMACION */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 7;
+  color: white;
+}
+
+.modal-content {
+  background-color: rgb(85, 164, 161);
+  max-width: 80%;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 1300px;
+  height: 500px;
+  position: relative;
+  bottom: 80px;
+}
+
+#regresarCompraBtn{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  bottom: 30px;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+}
+#regresarCompraBtn .sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#regresarCompraBtn .sign svg {
+  width: 17px;
+}
+
+#regresarCompraBtn .sign svg path {
+  fill: white;
+}
+/* text */
+#regresarCompraBtn .text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+#regresarCompraBtn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+#regresarCompraBtn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+#regresarCompraBtn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+#regresarCompraBtn:active {
+  transform: translate(2px ,2px);
+}
+
+.modal .contenedor-productos-confirmacion{
+  width: 400px;
+  background-color: #ffffff;
+  height: 400px;
+  position: relative;
+  bottom: 30px;
+  left: 540px;
+  border-radius: 1px;
+  color: #000;
+  border-radius: 7px;
+}
+.contenedor-productos-confirmacion{
+  max-height: 400px; 
+  overflow-y: auto; 
+  border: 1px solid #ccc;
+}
+.contenedor-productos-confirmacion ul{
+  font-size: 11px;
+  position: relative;
+  padding: 10px;
+}
+.total-pagar-confirmacion{
+  text-align: right;
+  font-size: 13px;
+  position: relative;
+  bottom: 1px;
+  right: 30px;
+}
+.total-pagar-confirmacion p{
+  position: relative;
+  right: 50px;
+}
+.nombre-producto, .cantidad-producto, .precio-producto {
+    margin-bottom: 5px; 
 }

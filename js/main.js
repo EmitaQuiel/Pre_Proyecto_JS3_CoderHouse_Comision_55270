@@ -281,15 +281,16 @@ let total = document.querySelector(".total-pagar");
 let cantidad = document.querySelector(".cantidad-carrito");
 let overlay = document.querySelector(".overlay");
 let listaProductos = [];
-
 const seccionesUl = {
   cardsets: document.querySelector(".productos-cardsets"),
   boosters: document.querySelector(".productos-boosters"),
   elitebox: document.querySelector(".productos-elitebox"),
 };
-
-const vaciarCarritoBtn = document.getElementById("vaciar-carrito-btn");
-vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
+const btn = document.querySelector("#vaciar-carrito-btn");
+const totalPagarElement = document.querySelector(".finalizar-compra");
+const finalizarCompraBtn = document.querySelector(".finalizar-compra");
+const modal = document.getElementById("modal");
+const regresarComprabtn = document.getElementById("regresarCompraBtn");
 
 abrirCompras.addEventListener("click", () => {
   cuerpo.classList.add("active");
@@ -301,11 +302,8 @@ cerrarCompras.addEventListener("click", () => {
   overlay.classList.remove("active");
 });
 
-//ARREGLAR
-const btn = document.querySelector("#vaciar-carrito-btn");
 btn.addEventListener("click", () => {
   if (listaProductos.length > 0) {
-    // Corrección aquí
     Swal.fire({
       title: "Genial",
       text: "Se vació el carrito!",
@@ -322,9 +320,7 @@ btn.addEventListener("click", () => {
     });
   }
 });
-//ARREGLAR
 
-const totalPagarElement = document.querySelector(".procesar-compra");
 totalPagarElement.addEventListener("click", () => {
   if (listaProductos.length === 0) {
     Swal.fire({
@@ -334,8 +330,41 @@ totalPagarElement.addEventListener("click", () => {
       confirmButtonText: "Entendido",
     });
   } else {
-    window.location.href = "../pages/confirmacion.html";
+    modal.style.display = "block";
+    generarContenidoConfirmacion();
   }
+});
+
+finalizarCompraBtn.addEventListener("click", () => {
+  if (listaProductos.length === 0) {
+    Swal.fire({
+      title: "Carrito vacío",
+      text: "El carrito está vacío. Agrega productos antes de proceder al pago.",
+      icon: "info",
+      confirmButtonText: "Entendido",
+    });
+  } else {
+    modal.style.display = "block";
+    generarContenidoConfirmacion();
+  }
+});
+
+const regresarCompraBtn = document.getElementById("regresarCompraBtn");
+regresarCompraBtn.addEventListener("click", () => {
+  listaProductos = [];
+  listaPago.innerHTML = "";
+  guardarProductosLocalStorage();
+  total.innerText = "₡0"; 
+  cantidad.innerText = "0";
+
+  modal.style.display = "none";
+
+  Swal.fire({
+    title: "Gracias por su compra",
+    text: "¡Gracias por su compra! Esperamos verlo nuevamente pronto.",
+    icon: "success",
+    confirmButtonText: "Aceptar",
+  });
 });
 
 function cargarProductosLocalStorage() {
@@ -360,10 +389,22 @@ function iniciarProductos() {
           <p class="producto-pokemon">${nombre}</p>
           <img src="${imagen}" class="model">
           <div class="detalles"><p>₡${precio}</p></div>
-          <button onclick="agregarCarrito(${key})" class="boton-agregar-carrito">Agregar al carrito</button>
+          <button class="boton-agregar-carrito">Agregar al carrito</button>
         </div>
       `;
       seccionesUl[seccion].appendChild(newDiv);
+
+      const botonAgregarCarrito = newDiv.querySelector(".boton-agregar-carrito");
+      botonAgregarCarrito.addEventListener("click", () => {
+        Swal.fire({
+          title: "Producto agregado",
+          text: "El producto ha sido agregado al carrito.",
+          imageUrl: '../assets/img/bulbasur-tenencia.png',
+          imageWidth: 250,
+          confirmButtonText: "Aceptar",
+        });
+        agregarCarrito(key);
+      });
     }
   });
 }
@@ -404,7 +445,6 @@ function recargarCarrito() {
       listaPago.appendChild(newDiv);
     }
   });
-
   total.innerText = `₡${precioPagar.toLocaleString()}`;
   cantidad.innerText = contar;
 }
@@ -438,6 +478,48 @@ function eliminarProducto(key) {
   }
 }
 
+function generarContenidoConfirmacion() {
+  const contenedorConfirmacion = document.querySelector('.contenedor-productos-confirmacion');
+  contenedorConfirmacion.innerHTML = ''; // Limpiamos el contenido previo
+
+  let contar = 0;
+  let precioPagar = 0;
+
+  listaProductos.forEach((value, key) => {
+    if (value) {
+      precioPagar += value.precio * value.cantidad;
+      contar += value.cantidad;
+
+      let newDiv = document.createElement('ul');
+      newDiv.classList.add('li-procesar');
+      newDiv.innerHTML = `
+        <div class="nombre-producto">Nombre:&nbsp;${value.nombre}</div>
+        <div class="cantidad-producto">Cantidad:&nbsp;${value.cantidad}</div>
+        <div class="precio-producto">Precio:&nbsp;₡${(value.precio * value.cantidad).toLocaleString()}</div>
+        <hr>
+      `;
+      contenedorConfirmacion.appendChild(newDiv);
+    }
+  });
+
+
+  let totalDiv = document.createElement('div');
+  totalDiv.classList.add('total-pagar-confirmacion');
+  totalDiv.innerHTML = `Total pagado:&nbsp;₡${precioPagar.toLocaleString()}</p>`;
+  contenedorConfirmacion.appendChild(totalDiv);
+}
+
 cargarProductosLocalStorage();
 iniciarProductos();
 recargarCarrito();
+
+
+
+
+
+
+
+
+  
+
+
