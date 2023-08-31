@@ -1,276 +1,11 @@
-const productos = [
-  {
-    //CATEGORIA CARDSETS
-    codigo: 1,
-    nombre: "Pokémon Caja Alakazam ex 151 Pokémon",
-    precio: 18100,
-    imagen: "../assets/img/Cardsets/pokemon-151-alakazam-collection.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 2,
-    nombre: "Pokémon Caja Eevee Evolutions Premium Collection",
-    precio: 72400,
-    imagen: "../assets/img/Cardsets/eevee-evolutions-premium-collection.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 3,
-    nombre: "Pokémon Caja Charizard ex Premium Collection",
-    precio: 42200,
-    imagen:
-      "../assets/img/Cardsets/Pokemon-TCG-Charizard-ex-Premium-Collection.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 4,
-    nombre: "Pokémon Caja Ho-Oh Poderes Supremos Leyendas Luminosas",
-    precio: 120600,
-    imagen:
-      "../assets/img/Cardsets/Pokémon Caja Ho-Oh Poderes Supremos Leyendas Luminosas 2017.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 5,
-    nombre: "Pokémon Crown Zenith Morpeko V Unión Box",
-    precio: 36400,
-    imagen:
-      "../assets/img/Cardsets/Pokémon  Crown Zenith Morpeko V Unión Box.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 6,
-    nombre: "Pokémon Ultra Beast Gx Colección 2018",
-    precio: 102500,
-    imagen: "../assets/img/Cardsets/buzzwole-gx-premium-collection.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 7,
-    nombre: "Pokémon Colección Mimikyu ex 2023",
-    precio: 17500,
-    imagen: "../assets/img/Cardsets/Pokémon Colección Mimikyu ex.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 8,
-    nombre: "Pokémon Caja Arceus V Figure Collection",
-    precio: 24100,
-    imagen:
-      "../assets/img/Cardsets/Pokémon Caja Arceus V Figure Collection.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 9,
-    nombre: "Pokémon Palkia Forma Origen VSTAR Premium Collections",
-    precio: 30200,
-    imagen:
-      "../assets/img/Cardsets/Pokémon Palkia Forma Origen VSTAR Premium Collections.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 10,
-    nombre: "Pokémon Mewtwo V-Union Special Collection",
-    precio: 34200,
-    imagen: "../assets/img/Cardsets/cardsets mewtwo.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 11,
-    nombre: "Pokémon Caja Annihilape ex",
-    precio: 20500,
-    imagen: "../assets/img/Cardsets/Pokémon Caja Annihilape ex.png",
-    seccion: "cardsets",
-  },
-  {
-    codigo: 12,
-    nombre: "Pokémon Caja Infernape V",
-    precio: 20500,
-    imagen: "../assets/img/Cardsets/Pokémon Caja Infernape V.png",
-    seccion: "cardsets",
-  },
-
-  //CATEGORIA BOOSTERS
-  {
-    codigo: 13,
-    nombre: "Pokémon Caja 36 Paldea Evolved",
-    precio: 89900,
-    imagen: "../assets/img/Boosters/Pokémon  Caja 36 Paldea Evolved.png",
-    seccion: "boosters",
-  },
-  {
-    codigo: 14,
-    nombre: "Pokémon Caja 36 Obsidian Flames",
-    precio: 89900,
-    imagen: "../assets/img/Boosters/Pokémon Caja 36 Obsidian Flames.png",
-    seccion: "boosters",
-  },
-  {
-    codigo: 15,
-    nombre: "Pokémon Caja 36 Sobre Tempestad Plateada",
-    precio: 95900,
-    imagen:
-      "../assets/img/Boosters/Pokémon  Caja 36 Sobre Tempestad Plateada.png",
-    seccion: "boosters",
-  },
-  {
-    codigo: 16,
-    nombre: "Pokémon Caja 36 Sobres Battle Styles",
-    precio: 89900,
-    imagen:
-      "../assets/img/Boosters/Sobres_Battle_Styles_Inglés-removebg-preview.png",
-    seccion: "boosters",
-  },
-  {
-    codigo: 17,
-    nombre: "Pokémon Caja 36 Sobres Fusion Strike",
-    precio: 92300,
-    imagen: "../assets/img/Boosters/Sobres_Fusion_Strike-removebg-preview.png",
-    seccion: "boosters",
-  },
-  {
-    codigo: 18,
-    nombre: "Pokémon Caja 18 Sobres Darkness Ablaze",
-    precio: 60000,
-    imagen:
-      "../assets/img/Boosters/Pokémon  Caja 18 Sobres Darkness Ablaze.png",
-    seccion: "boosters",
-  },
-  {
-    codigo: 19,
-    nombre: "Pokémon Caja 18 Sobres Escarlata y Púrpura",
-    precio: 44900,
-    imagen: "../assets/img/Boosters/Pokémon  Caja 18 Escarlata y Púrpura.png",
-    seccion: "boosters",
-  },
-  {
-    codigo: 20,
-    nombre: "Pokémon Caja 36 Sobres Escarlata y Púrpura",
-    precio: 74000,
-    imagen: "../assets/img/Boosters/purpuraescarlata.png",
-    seccion: "boosters",
-  },
-  {
-    codigo: 21,
-    nombre: "Pokémon Caja 36 Sobres Sword & Shield Dark Ablaze",
-    precio: 96300,
-    imagen: "../assets/img/Boosters/Sword & Shield Dark Ablaze.png",
-    seccion: "boosters",
-  },
-  {
-    codigo: 22,
-    nombre: "Pokémon Caja 36 Sobres Evolving Skies",
-    precio: 87700,
-    imagen: "../assets/img/Boosters/evolving skies.jpg",
-    seccion: "boosters",
-  },
-  {
-    codigo: 23,
-    nombre: "Pokémon Caja 36 Sobres Forbidden Light",
-    precio: 87900,
-    imagen: "../assets/img/Boosters/Forbidden Light.png",
-    seccion: "boosters",
-  },
-  {
-    codigo: 24,
-    nombre: "Pokémon Caja 36 Sobres Evolutions",
-    precio: 93500,
-    imagen: "../assets/img/Boosters/Evolutions.png",
-    seccion: "boosters",
-  },
-
-  //CATEGORIA ELITEBOX
-  {
-    codigo: 25,
-    nombre: "Pokémon GO Caja Élite de Entrenamiento",
-    precio: 49900,
-    imagen: "../assets/img/Elitebox/caja elite mewtwo.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 26,
-    nombre: "Pokémon Caja Élite de Entrenador Obsidian Flames",
-    precio: 36700,
-    imagen:
-      "../assets/img/Elitebox/Caja_Élite_de_Entrenador_Obsidian_Flames-removebg-preview.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 27,
-    nombre: "Pokémon Elite Trainer Box Crown Zenith",
-    precio: 42000,
-    imagen:
-      "../assets/img/Elitebox/Pokémon  Elite Trainer Box Crown Zenith.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 28,
-    nombre: "Pokémon Caja Élite de Entrenador 151 Pokémon",
-    precio: 36000,
-    imagen:
-      "../assets/img/Elitebox/Caja_Élite_de_Entrenador_151-removebg-preview.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 29,
-    nombre: "Pokémon Caja Élite Vivid Voltage",
-    precio: 36000,
-    imagen: "../assets/img/Elitebox/Pokémon Caja Élite Vivid Voltage.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 30,
-    nombre: "Pokémon Caja Élite de Entrenador Resplandor Astral",
-    precio: 49800,
-    imagen:
-      "../assets/img/Elitebox/Pokémon Caja Élite de Entrenador Resplandor Astral.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 31,
-    nombre: "Pokémon Caja Élite Coleccion Poderes Supremos - Charizard",
-    precio: 72000,
-    imagen: "../assets/img/Elitebox/caja charizard.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 32,
-    nombre: "Pokémon Caja Élite de Entrenador Majestad de Dragones",
-    precio: 89900,
-    imagen:
-      "../assets/img/Elitebox/Pokémon  Caja Élite de Entrenador Majestad de Dragones.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 33,
-    nombre: "Pokémon Caja Élite en Entrenador Evoluciones en Paldea ",
-    precio: 36000,
-    imagen:
-      "../assets/img/Elitebox/Pokémon Caja Élite en Entrenador Evoluciones en Paldea.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 34,
-    nombre: "Pokémon Caja Élite Luz Prohibida",
-    precio: 60000,
-    imagen: "../assets/img/Elitebox/Pokémon  Caja Élite Luz Prohibida.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 35,
-    nombre: "Pokémon Caja Élite de Destinos Brillantes",
-    precio: 56400,
-    imagen: "../assets/img/Elitebox/destinos brillantes.png",
-    seccion: "elitebox",
-  },
-  {
-    codigo: 36,
-    nombre: "Pokémon Caja Élite de Tempestad Plateada",
-    precio: 37800,
-    imagen: "../assets/img/Elitebox/Tempestad Plateda.png",
-    seccion: "elitebox",
-  },
-];
+let productos = [];
+fetch("../js/productos.json")
+  .then(response => response.json())
+  .then(data => {
+    productos = data;
+    iniciarProductos(); 
+  })
+  .catch(error => console.error("Error:", error));
 
 let abrirCompras = document.querySelector(".carrito");
 let cerrarCompras = document.querySelector(".cerrar-tienda");
@@ -350,13 +85,8 @@ finalizarCompraBtn.addEventListener("click", () => {
 });
 
 const regresarCompraBtn = document.getElementById("regresarCompraBtn");
-regresarCompraBtn.addEventListener("click", () => {
-  listaProductos = [];
-  listaPago.innerHTML = "";
-  guardarProductosLocalStorage();
-  total.innerText = "₡0"; 
-  cantidad.innerText = "0";
-
+regresarComprabtn.addEventListener("click", () => {
+  vaciarCarrito();
   modal.style.display = "none";
 
   Swal.fire({
@@ -366,6 +96,7 @@ regresarCompraBtn.addEventListener("click", () => {
     confirmButtonText: "Aceptar",
   });
 });
+
 
 function cargarProductosLocalStorage() {
   const productosEnLocalStorage = localStorage.getItem("productosCarrito");
@@ -379,6 +110,9 @@ function guardarProductosLocalStorage() {
 }
 
 function iniciarProductos() {
+  if (!productos) {
+    return; 
+  }
   productos.forEach((value, key) => {
     const { codigo, nombre, precio, imagen, seccion } = value;
 
@@ -418,6 +152,7 @@ function agregarCarrito(key) {
   guardarProductosLocalStorage();
   recargarCarrito();
 }
+
 
 function recargarCarrito() {
   listaPago.innerHTML = "";
@@ -480,7 +215,7 @@ function eliminarProducto(key) {
 
 function generarContenidoConfirmacion() {
   const contenedorConfirmacion = document.querySelector('.contenedor-productos-confirmacion');
-  contenedorConfirmacion.innerHTML = ''; // Limpiamos el contenido previo
+  contenedorConfirmacion.innerHTML = ''; 
 
   let contar = 0;
   let precioPagar = 0;
@@ -502,7 +237,6 @@ function generarContenidoConfirmacion() {
     }
   });
 
-
   let totalDiv = document.createElement('div');
   totalDiv.classList.add('total-pagar-confirmacion');
   totalDiv.innerHTML = `Total pagado:&nbsp;₡${precioPagar.toLocaleString()}</p>`;
@@ -512,14 +246,3 @@ function generarContenidoConfirmacion() {
 cargarProductosLocalStorage();
 iniciarProductos();
 recargarCarrito();
-
-
-
-
-
-
-
-
-  
-
-
