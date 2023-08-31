@@ -84,7 +84,6 @@ finalizarCompraBtn.addEventListener("click", () => {
   }
 });
 
-const regresarCompraBtn = document.getElementById("regresarCompraBtn");
 regresarComprabtn.addEventListener("click", () => {
   vaciarCarrito();
   modal.style.display = "none";
@@ -96,7 +95,6 @@ regresarComprabtn.addEventListener("click", () => {
     confirmButtonText: "Aceptar",
   });
 });
-
 
 function cargarProductosLocalStorage() {
   const productosEnLocalStorage = localStorage.getItem("productosCarrito");
@@ -152,7 +150,6 @@ function agregarCarrito(key) {
   guardarProductosLocalStorage();
   recargarCarrito();
 }
-
 
 function recargarCarrito() {
   listaPago.innerHTML = "";
