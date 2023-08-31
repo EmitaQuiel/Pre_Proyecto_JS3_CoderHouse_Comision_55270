@@ -80,7 +80,7 @@ header {
   display: flex;
   text-align: center;
   position: relative;
-  top: 30px;
+  top: 40px;
 }
 .pago .pagar {
   position: absolute;
@@ -192,18 +192,68 @@ header {
 }
 .vaciar-carrito {
   position: relative;
-  left: 170px;
-  bottom: 50px;
+  left: 180px;
+  bottom: 45px;
   margin: none;
 }
-.vaciar-carrito img {
-  width: 25px;
-  position: relative;
-  top: 5px;
-}
 #vaciar-carrito-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
   border: none;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
 }
+.delete-svgIcon {
+  width: 15px;
+  transition-duration: 0.3s;
+}
+
+.delete-svgIcon path {
+  fill: white;
+}
+
+#vaciar-carrito-btn:hover {
+  width: 90px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+#vaciar-carrito-btn:hover .delete-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+#vaciar-carrito-btn::before {
+  display: none;
+  content: "Vaciar";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+#vaciar-carrito-btn:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
 .lista-pago .contar {
   margin: 0 10px;
 }
@@ -563,7 +613,7 @@ nav ul li a:hover::after {
   right: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 0));
 }
-.total-pagar{
+.total-pagar {
   position: relative;
   left: 150px;
 }
@@ -942,7 +992,6 @@ footer {
   }
 }
 
-
 /* HTML CONFIRMACION */
 .modal {
   display: none;
@@ -968,8 +1017,11 @@ footer {
   position: relative;
   bottom: 80px;
 }
-
-#regresarCompraBtn{
+.modal-content h2 {
+  position: relative;
+  left: 50px;
+}
+#regresarCompraBtn {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -981,13 +1033,13 @@ footer {
   position: relative;
   bottom: 30px;
   overflow: hidden;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
   background-color: rgb(255, 65, 65);
 }
 #regresarCompraBtn .sign {
   width: 100%;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1009,33 +1061,33 @@ footer {
   color: white;
   font-size: 1.2em;
   font-weight: 600;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 /* hover effect on button width */
 #regresarCompraBtn:hover {
   width: 125px;
   border-radius: 40px;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 #regresarCompraBtn:hover .sign {
   width: 30%;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   padding-left: 20px;
 }
 /* hover effect button's text */
 #regresarCompraBtn:hover .text {
   opacity: 1;
   width: 70%;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   padding-right: 10px;
 }
 /* button click effect*/
 #regresarCompraBtn:active {
-  transform: translate(2px ,2px);
+  transform: translate(2px, 2px);
 }
 
-.modal .contenedor-productos-confirmacion{
+.modal .contenedor-productos-confirmacion {
   width: 400px;
   background-color: #ffffff;
   height: 400px;
@@ -1046,27 +1098,29 @@ footer {
   color: #000;
   border-radius: 7px;
 }
-.contenedor-productos-confirmacion{
-  max-height: 400px; 
-  overflow-y: auto; 
+.contenedor-productos-confirmacion {
+  max-height: 400px;
+  overflow-y: auto;
   border: 1px solid #ccc;
 }
-.contenedor-productos-confirmacion ul{
+.contenedor-productos-confirmacion ul {
   font-size: 11px;
   position: relative;
   padding: 10px;
 }
-.total-pagar-confirmacion{
+.total-pagar-confirmacion {
   text-align: right;
   font-size: 13px;
   position: relative;
   bottom: 1px;
   right: 30px;
 }
-.total-pagar-confirmacion p{
+.total-pagar-confirmacion p {
   position: relative;
   right: 50px;
 }
-.nombre-producto, .cantidad-producto, .precio-producto {
-    margin-bottom: 5px; 
+.nombre-producto,
+.cantidad-producto,
+.precio-producto {
+  margin-bottom: 5px;
 }
