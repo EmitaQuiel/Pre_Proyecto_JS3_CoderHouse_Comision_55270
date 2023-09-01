@@ -27,6 +27,18 @@ const finalizarCompraBtn = document.querySelector(".finalizar-compra");
 const modal = document.getElementById("modal");
 const regresarComprabtn = document.getElementById("regresarCompraBtn");
 
+const nav = document.querySelector('#nav');
+const abrir = document.querySelector('#abrir');
+const cerrar = document.querySelector('#cerrar');
+
+abrir.addEventListener("click", () =>{
+  nav.classList.add("visible");
+});
+
+cerrar.addEventListener("click", () =>{
+  nav.classList.remove("visible");
+});
+
 abrirCompras.addEventListener("click", () => {
   cuerpo.classList.add("active");
   overlay.classList.add("active");

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Cards&Games Productos</title>
   </head>
   <body>
@@ -12,7 +13,7 @@
     <div class="overlay">
     <header>
       <div class="contenedor-opciones">
-        <nav>
+        <nav >
           <img src="../assets/img/Logo_footer-transformed.png" class="logo" />
           <div class="carrito">
             <img
@@ -20,13 +21,19 @@
             />
             <span class="cantidad-carrito">0</span>
           </div>
-          <ul id="menu">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="#cardsets">Cards Sets</a></li>
-            <li><a href="#boosters">Boosters</a></li>
-            <li><a href="#elitebox">Elite Box</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
+          <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+
+          <nav class="nav" id="nav">
+            <button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button>
+            <ul id="menu">
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="#cardsets">Cards Sets</a></li>
+              <li><a href="#boosters">Boosters</a></li>
+              <li><a href="#elitebox">Elite Box</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+
         </nav>
       </div>
       <div class="lista"></div>

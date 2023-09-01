@@ -918,8 +918,6 @@ footer {
 }
 /* FIN DE MOSTRAR CARTAS */
 
-/* RESPONSIVE TABLET */
-
 
 /* HTML CONFIRMACION */
 .modal {
@@ -1059,8 +1057,63 @@ footer {
 .precio-producto {
   margin-bottom: 5px;
 }
+.abrir-menu, .cerrar-menu{
+  display: none;
+}
+
 /* RESPONSIVE DE TABLET */
 @media (max-width: 768px) {
+  .carrito {
+    position: relative;
+    left: 150px;
+    top: 29px;
+  }
+  .carrito img {
+    width: 20px;
+  }
+  .carrito span {
+    width: 10px;
+    height: 15px;
+    font-size: 11px;
+    position: absolute;
+    top: -10px;
+  }
+  .contenedor-opciones .abrir-menu, .cerrar-menu{
+    display: block;
+    border: 0;
+    font-size: 25px;
+    background-color: white;
+  } 
+  .abrir-menu{
+    position: relative;
+    top: 30px;
+  }
+  .contenedor-opciones .nav{
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+  }
+  .nav.visible{
+    opacity: 1;
+    visibility: visible;
+  }
+  .contenedor-opciones .nav #menu{
+    flex-direction: column;
+    align-items: end;
+  }
+  .contenedor-opciones .nav #menu li a{
+    color: white;
+  }
   /* RESPONSIVE LOGO PRINCIPAL */
   .contenedor-opciones .logo{
     right: 50px;
@@ -1189,21 +1242,36 @@ footer {
     height: 200px;
   }
 }
+.nav{
+  display: flex;
+}
 @media (max-width: 375px) {
   body{
     overflow-x: hidden;
   }
-  
-  .carrito{
-    display: flex;
-    width: 30px;
-    height: 35px;
+  header{
+    width: 380px;
+  }
+  .carrito {
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+  }
+  .carrito img {
+    width: 20px;
+  }
+  .carrito span {
+    width: 10px;
+    height: 15px;
+    font-size: 11px;
+    position: absolute;
+    top: -10px;
   }
   .contenedor-opciones .logo{
     width: 170px;
     left: -30px;
   }
-  .presentacion-productos {
+  .presentacion-productos{
     height: 350px;
   }
   .presentacion-productos h1{
