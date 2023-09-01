@@ -1190,6 +1190,10 @@ footer {
   }
 }
 @media (max-width: 375px) {
+  body{
+    overflow-x: hidden;
+  }
+  
   .carrito{
     display: flex;
     width: 30px;
