@@ -428,6 +428,8 @@ nav ul li a:hover::after {
   padding-top: 10px;
 }
 .contenedor-productos-cardsets {
+  background-image: url(../assets/img/backgrounds/background_cards.png);
+  background-size: 900px;
   position: relative;
   top: 300px;
   width: 100%;
@@ -438,7 +440,6 @@ nav ul li a:hover::after {
   padding-bottom: 100px;
   overflow: hidden;
 }
-
 .box {
   width: 350px;
   height: 420px;
@@ -535,6 +536,8 @@ nav ul li a:hover::after {
   right: 10px;
 }
 .contenedor-productos-boosters {
+  background-image: url(../assets/img/backgrounds/background_cards.png);
+  background-size: 900px;
   position: relative;
   top: 300px;
   width: 100%;
@@ -546,6 +549,8 @@ nav ul li a:hover::after {
   overflow: hidden;
 }
 .contenedor-productos-elitebox {
+  background-image: url(../assets/img/backgrounds/background_cards.png);
+  background-size: 900px;
   position: relative;
   top: 300px;
   width: 100%;
@@ -1054,7 +1059,6 @@ footer {
 .precio-producto {
   margin-bottom: 5px;
 }
-
 /* RESPONSIVE DE TABLET */
 @media (max-width: 768px) {
   /* RESPONSIVE LOGO PRINCIPAL */
@@ -1184,4 +1188,71 @@ footer {
     width: 150px;
     height: 200px;
   }
+}
+@media (max-width: 375px) {
+  .carrito{
+    display: flex;
+    width: 30px;
+    height: 35px;
+  }
+  .contenedor-opciones .logo{
+    width: 170px;
+    left: -30px;
+  }
+  .presentacion-productos {
+    height: 350px;
+  }
+  .presentacion-productos h1{
+    font-size: 20px;
+    padding-top: 30px;
+  }
+  .presentacion-productos p{
+    font-size: 13px;
+    margin: 0;
+  }
+  /* responsive productos */
+  .titulo-principal{
+    position: relative;
+    left: 20px;
+    font-size: 30px;
+  }
+
+  /* responsive footer */
+  #contacto{
+    display: flex;
+  }
+  .contenedor-footer{
+    flex: 1;
+  }
+  .logo-footer img{
+    position: relative;
+    left: 45px;
+  }
+  .contenedor-footer .terms{
+    font-size: 13px;
+    margin: 30px;
+    text-align: center;
+  }
+  .contenedor-footer .terms p{
+    position: relative;
+    left: -45px;
+  }
+  .box-footer{
+    padding: 50px;
+  }
+  .box-footer a{
+    font-size: 13px;
+  }
+  .pikachu-footer{
+    bottom: 0px;
+    z-index: 1;
+    left: 250px;
+  }
+  .box-copyrigth{
+    position: relative;
+    top: 640px;
+    right: 460px;
+    font-size: 14px;
+  }
+
 }
