@@ -536,7 +536,7 @@ nav ul li a:hover::after {
 }
 .contenedor-productos-boosters {
   position: relative;
-  top: 500px;
+  top: 300px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -547,7 +547,7 @@ nav ul li a:hover::after {
 }
 .contenedor-productos-elitebox {
   position: relative;
-  top: 500px;
+  top: 300px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -914,83 +914,7 @@ footer {
 /* FIN DE MOSTRAR CARTAS */
 
 /* RESPONSIVE TABLET */
-@media (max-width: 767px) {
-  /* RESPONSIVE DE LA PRESENTACION PRINCIPAL */
-  .presentacion-productos {
-    height: 500px;
-  }
-  .presentacion-productos h1 {
-    position: relative;
-    top: 290px;
-  }
-  .presentacion-productos p {
-    position: relative;
-    top: 290px;
-  }
 
-  /* RESPONSIVE DE LOS PRODUCTOS */
-  .contenedor-productos-cardsets .productos-cardsets li {
-    margin: auto;
-  }
-  .contenedor-productos-cardsets {
-    padding: 55px;
-  }
-  .contenedor-productos-boosters .productos-boosters li {
-    margin: auto;
-  }
-  .contenedor-productos-boosters {
-    padding: 55px;
-  }
-  .contenedor-productos-elitebox .productos-elitebox li {
-    margin: auto;
-  }
-  .contenedor-productos-elitebox {
-    padding: 55px;
-  }
-  .titulo-principal {
-    left: 140px;
-  }
-  .box {
-    width: 300px;
-    height: 300px;
-    margin-left: 20px;
-    margin-top: 30px;
-  }
-  .model {
-    position: relative;
-    left: 70px;
-    top: 10px;
-    height: 150px;
-  }
-  .producto-pokemon {
-    font-size: 14px;
-    top: 5px;
-  }
-  .detalles p {
-    left: -15px;
-    margin-top: 20px;
-    font-size: 20px;
-  }
-  .boton-agregar-carrito {
-    font-size: 12px;
-    line-height: 14px;
-    position: relative;
-    left: 80px;
-  }
-
-  /* RESPONSIVE FOOTER */
-  footer {
-    width: 100%;
-    padding: 50px 0;
-    background-color: #c7e7ff;
-    -webkit-mask-image: url(../assets/img/background-footer.svg);
-    mask-image: url(../assets/img/background-footer.svg);
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    margin-top: 430px;
-    position: relative;
-  }
-}
 
 /* HTML CONFIRMACION */
 .modal {
@@ -1006,7 +930,7 @@ footer {
 }
 
 .modal-content {
-  background-color: rgb(85, 164, 161);
+  background-color: rgb(110, 163, 154);
   max-width: 80%;
   margin: 10% auto;
   padding: 20px;
@@ -1017,9 +941,15 @@ footer {
   position: relative;
   bottom: 80px;
 }
-.modal-content h2 {
+.modal-content img{
+  position: absolute;
+  left: 500px;
+  width: 500px;
+}
+.modal-content h2{
   position: relative;
-  left: 50px;
+  left: 140px;
+  color: rgb(255, 255, 255);
 }
 #regresarCompraBtn {
   display: flex;
@@ -1035,7 +965,7 @@ footer {
   overflow: hidden;
   transition-duration: 0.3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-  background-color: rgb(255, 65, 65);
+  background-color: rgb(33, 97, 80);
 }
 #regresarCompraBtn .sign {
   width: 100%;
@@ -1092,8 +1022,8 @@ footer {
   background-color: #ffffff;
   height: 400px;
   position: relative;
-  bottom: 30px;
-  left: 540px;
+  bottom: 10px;
+  left: 55px;
   border-radius: 1px;
   color: #000;
   border-radius: 7px;
@@ -1123,4 +1053,135 @@ footer {
 .cantidad-producto,
 .precio-producto {
   margin-bottom: 5px;
+}
+
+/* RESPONSIVE DE TABLET */
+@media (max-width: 768px) {
+  /* RESPONSIVE LOGO PRINCIPAL */
+  .contenedor-opciones .logo{
+    right: 50px;
+  }
+  /* RESPONSIVE DE LA PRESENTACION PRINCIPAL */
+  .presentacion-productos {
+    height: 500px;
+  }
+  .presentacion-productos h1 {
+    position: relative;
+    top: 290px;
+  }
+  .presentacion-productos p {
+    position: relative;
+    top: 290px;
+  }
+  .contenedor-tendencias{
+    top: 500px;
+    position: absolute;
+    background-size: 1500px;
+  }
+  
+  /* REPONSIVE DEL ANIVERSARIO */
+  .aniversario{
+    top: 590px;
+  }
+  .aniversario-imagen-1{
+    width: 350px;
+  }
+  .aniversario-imagen-2{
+    left: 300px;
+  }
+  .aniversario-imagen-3{
+    width: 70px;
+    right: 320px;
+  }
+  .contenedor-aniversario-imagenes span{
+    font-size: 18px;
+    position: relative;
+    left: 110px;
+    top: 300px;
+  }
+  .contenedor-aniversario-imagenes .p-aniversario-2{
+    font-size: 15px;
+    left: 120px;
+    top: 310px;
+  }
+  .contenedor-aniversario-imagenes p{
+    font-size: 14px;
+    left: 10px;
+  }
+
+  /* MOSTRAR CARTAS HOLO */
+  .mostrar-cartas{
+    position: absolute;
+    bottom: 200px;
+  }
+  .mostrar-cartas h1{
+    left: -150px;
+  }
+  .mostrar-cartas .card{
+    margin-top: 80px;
+  }
+  .mostrar-cartas p{
+    padding: 5px;
+  }
+
+  /* RESPONSIVE DE LOS PRODUCTOS */
+  .contenedor-productos-cardsets .productos-cardsets li {
+    margin: auto;
+  }
+  .contenedor-productos-cardsets {
+    padding: 55px;
+  }
+  .contenedor-productos-boosters .productos-boosters li {
+    margin: auto;
+  }
+  .contenedor-productos-boosters {
+    padding: 55px;
+  }
+  .contenedor-productos-elitebox .productos-elitebox li {
+    margin: auto;
+  }
+  .contenedor-productos-elitebox {
+    padding: 55px;
+  }
+  .titulo-principal {
+    left: 140px;
+  }
+  .box {
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  .model {
+    position: relative;
+    left: 70px;
+    top: 10px;
+    height: 150px;
+  }
+  .producto-pokemon {
+    font-size: 14px;
+    top: 5px;
+  }
+  .detalles p {
+    left: -15px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .boton-agregar-carrito {
+    font-size: 12px;
+    line-height: 14px;
+    position: relative;
+    left: 80px;
+  }
+
+  /* RESPONSIVE FOOTER */
+  footer {
+    width: 770px;
+    padding: 50px 0;
+    position: absolute;
+  }
+  .contenedor-footer .pikachu-footer{
+    width: 150px;
+    height: 200px;
+  }
 }

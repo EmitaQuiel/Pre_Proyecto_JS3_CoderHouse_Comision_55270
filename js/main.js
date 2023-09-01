@@ -40,7 +40,7 @@ cerrarCompras.addEventListener("click", () => {
 btn.addEventListener("click", () => {
   if (listaProductos.length > 0) {
     Swal.fire({
-      title: "Genial",
+      title: "Vació",
       text: "Se vació el carrito!",
       icon: "success",
       confirmButtonText: "Cool",
@@ -91,7 +91,8 @@ regresarComprabtn.addEventListener("click", () => {
   Swal.fire({
     title: "Gracias por su compra",
     text: "¡Gracias por su compra! Esperamos verlo nuevamente pronto.",
-    icon: "success",
+    imageUrl: '../assets/img/agradecimiento-compra.png',
+    imageWidth: 300,
     confirmButtonText: "Aceptar",
   });
 });
